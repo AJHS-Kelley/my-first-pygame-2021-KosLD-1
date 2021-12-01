@@ -1,4 +1,4 @@
-# My First PyGame, Bruce Smith, 11/30/21, 8:49AM, v0.6
+# My First PyGame, Bruce Smith, 11/30/21, 8:40AM, v0.7
 
 import pygame, sys
 from pygame.locals import *
@@ -31,18 +31,18 @@ textRect.centery = windowSurface.get_rect().centery
 windowSurface.fill(GIGGIDYGIGIDYGOOO)
 
 # Draw a green polygon onto the surface.
+pygame.draw.polygon(windowSurface, GREEN, ((146, 0), (291, 106), (236, 277), (56, 277), (0, 106)))
 
-
-
-
-
-
+# Draw blue lines on the window surface.
+pygame.draw.line(windowSurface, BLUE, (60, 60), (120, 60), 4)
+pygame.draw.line(windowSurface, BLUE, (120, 60), (60, 120))
+pygame.draw.line(windowSurface, BLUE, (60, 120), (120, 120), 4)
 
 # Draw a circle.
 pygame.draw.circle(windowSurface, BLUE, (300, 50), 20, 0)
 
 # Draw an ellipse.
-pygame.draw.ellipse(windowSurface, RED, (300, 250, 40 80), 1)
+pygame.draw.ellipse(windowSurface, RED, (300, 250, 40, 80), 1)
 
 #Draw text background rectangle onto surface. NEW STARTING WEDNESDAY
 pygame.draw.rect(windowSurface, RED, (textRect.left - 20, textRect.top - 20, textRect.width + 40, textRect.height + 40))
@@ -54,3 +54,10 @@ del pixArray
 
 # Draw the text onto the surface.
 windowSurface.blit(text, textRect)
+
+# Draw the window onto the screen.
+pygame.display.update()
+
+# Run the gameloop.
+while True:
+    for event in 
