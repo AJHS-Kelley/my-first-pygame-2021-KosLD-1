@@ -1,7 +1,9 @@
-# Simple Animation with Pygame, Bruce Smith, 12/08/21, 8:36AM, v0.2
+# Simple Animation with Pygame, Bruce Smith, 12/08/21, 8:43AM, v0.3
 
 import pygame, sys, time
 from pygame.locals import *
+
+from myFirstPygame import GREEN, RED
 
 # Setup PyGame
 pygame.init()
@@ -19,3 +21,10 @@ UPLEFT = 'upleft'
 UPRIGHT = 'upright'
 
 MOVESPEED = 4
+
+# Setup color values.
+WHITE = (255, 255, 255)
+RED = (255, 0, 0)
+GREEN = (0, 255, 0)
+BLUE = (0, 0, 255)
+
