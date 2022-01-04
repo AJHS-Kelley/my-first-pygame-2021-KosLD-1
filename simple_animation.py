@@ -1,4 +1,4 @@
-# Simple Animation with Pygame, Bruce Smith, 12/08/21, 1:02PM, v0.9
+# Simple Animation with Pygame, Bruce Smith, 12/08/21, 1:19PM, v0.9
 
 import pygame, sys, time
 from pygame.locals import *
@@ -60,9 +60,9 @@ while True:
         if b['rect'].top < 0:
             # The box has moved past the top.
             if b['dir'] == UPLEFT:
-                b['dir'] == DOWNLEFT
+                b['dir'] = DOWNLEFT
             if b['dir'] == UPRIGHT:
-                b['dir'] == DOWNRIGHT
+                b['dir'] = DOWNRIGHT
         if b['rect'].bottom > WINDOWHEIGHT:
             # The box has moved past the bottom.
             if b['dir'] == DOWNLEFT:
