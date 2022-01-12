@@ -1,4 +1,4 @@
-# PyGame Collision Detection Practice, Bruce Smith, January 04, 2022, 11:34am, v0.9
+# PyGame Collision Detection Practice, Bruce Smith, January 04, 2022, 11:42am, v1.0
 
 import pygame, sys, random
 from pygame.locals import *
@@ -83,6 +83,18 @@ while True:
         foodCounter = 0
         foods.append(pygame.Rect(random.randint(0, WINDOWWIDTH - FOODSIZE), random.randint(0, WINDOWHEIGHT - FOODSIZE), FOODSIZE, FOODSIZE))
 
-        # Draw white background on Window Surface.
-        windowSurface.fill(WHITE)
+    # Draw white background on Window Surface.
+    windowSurface.fill(WHITE)
 
+    # Move the player.
+    if moveDown and player.bottom < WINDOWHEIGHT:
+        player.top += MOVESPEED
+    if moveUp and player.top > 0:
+        player.top -= MOVESPEED
+    if moveLeft and player.left > 0:
+        player.left -= MOVESPEED
+    if moveRight and player.right < WINDOWWIDTH:
+        player.right += MOVESPEED
+
+    # Draw the player on the surface.
+    pygame.draw.rect(windowSurface, BLACK, player)
